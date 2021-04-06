@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     setMessage("Hello neue Fische");
-  })
+  }, []);
   return (
     <div className="App">
       <h1>{message}</h1>
