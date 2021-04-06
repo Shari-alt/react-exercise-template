@@ -3,12 +3,15 @@ import { useEffect, useState } from "react";
 function Counter() {
   const [count, setCount] = useState(0);
   // Your code below
+  
   useEffect(() => {
-    const dataFromLocalStorage = localStorage.getItem("number") ?? "null";
-    SVGAnimatedNumber(dataFromLocalStorage);
-  });
+    const dataFromLocalStorage = Number(localStorage.getItem("number") ?? "null");
+    setCount(dataFromLocalStorage);
+  },[]);
 
-  useEffect(())
+  useEffect(() => {
+    localStorage.setItem("number", count);
+  }, [count]);
 
   function handleDecrement() {
     setCount(count - 1);
