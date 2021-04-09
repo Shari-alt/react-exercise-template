@@ -1,5 +1,8 @@
 .App {
+  display: flex;
   text-align: center;
+  background-color: slategray;
+  grid-template-rows: [header] 100px [main] auto;
 }
 
 .App-logo {
@@ -15,8 +18,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+  grid-row: header;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -35,4 +37,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ResultList {
+  display: flex;
+  flex-direction: column;
+}
+.femaleUser {
+  background-color: rosybrown;
 }
