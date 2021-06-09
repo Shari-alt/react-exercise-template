@@ -22,7 +22,7 @@ function UserList() {
     function renderResults () {
         const userList= results.map((result) => (
             <User 
-            key={result.email}
+            key={.email}
             title={result.name.title}
             first={result.name.first}
             last={result.name.last} 
